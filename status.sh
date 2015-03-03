@@ -2,7 +2,7 @@
 
 ############## copy this script to your armarx-dir
 ############## edit this to fit your setup:
-PKG_NAMES="Doc Core RobotAPI Gui MemoryX VisionX Spoac SimulationX RobotSkills Armar3 Armar4 HapticExploration"
+PKG_NAMES="Doc Core RobotAPI Gui MemoryX VisionX Spoac SimulationX RobotSkills Armar3 Armar4"
 BASEDIR=~/armarx/
 
 
