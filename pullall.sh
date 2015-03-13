@@ -1,15 +1,15 @@
 #!/bin/bash -eu
-BASEDIR=$(dirname $0)
+
+pushd `dirname $0` > /dev/null
+BASEDIR=`pwd`
+popd > /dev/null
 
 source $BASEDIR/config.rc
 source $BASEDIR/colors.rc
 
-cd $ARMARX_DIR
-
 for PKG_DIR in $PKG_NAMES; do
 	echo -e "${BWhi}${PKG_DIR}${RCol}"
-	cd $PKG_DIR
+	cd $ARMARX_DIR/$PKG_DIR
 	git pull
-    cd -
 done
 
