@@ -1,2 +1,2 @@
-PKG_NAMES="Core RobotAPI Gui MemoryX VisionX Spoac SimulationX RobotSkills Armar3 Armar4"
+PKG_NAMES="Core Gui RobotAPI MemoryX VisionX Spoac SimulationX RobotSkills Armar3 Armar4"
 ARMARX_DIR=$BASEDIR/../../armarx
