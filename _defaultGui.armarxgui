@@ -1,0 +1,18 @@
+[General]
+loadedLibs=/localhome/vmmaster/armarx/Gui/build/lib/libConditionViewerGuiPlugin.so, /localhome/vmmaster/armarx/Gui/build/lib/libLoggingGuiPlugin.so, /localhome/vmmaster/armarx/Gui/build/lib/libObserverPropertiesGuiPlugin.so, /localhome/vmmaster/armarx/Gui/build/lib/libStatechartEditorGuiPlugin.so, /localhome/vmmaster/armarx/Gui/build/lib/libStatechartEventSenderGuiPlugin.so, /localhome/vmmaster/armarx/Gui/build/lib/libStateChartGuiPlugin.so, /localhome/vmmaster/armarx/Gui/build/lib/libStatechartViewerGuiPlugin.so, /localhome/vmmaster/armarx/Gui/build/lib/libSystemStateMonitorGuiPlugin.so, /localhome/vmmaster/armarx/MemoryX/build/lib/libGraphVisualizertGuiPlugin.so, /localhome/vmmaster/armarx/MemoryX/build/lib/libGridFSFileEditorGuiPlugin.so, /localhome/vmmaster/armarx/MemoryX/build/lib/libPriorMemoryEditorGuiPlugin.so, /localhome/vmmaster/armarx/MemoryX/build/lib/libSnapshotControlGuiPlugin.so, /localhome/vmmaster/armarx/MemoryX/build/lib/libWorkingMemoryGuiPlugin.so, /localhome/vmmaster/armarx/RobotAPI/build/lib/libHandUnitGuiPlugin.so, /localhome/vmmaster/armarx/RobotAPI/build/lib/libHapticUnitGuiPlugin.so, /localhome/vmmaster/armarx/RobotAPI/build/lib/libKinematicUnitGuiPlugin.so, /localhome/vmmaster/armarx/RobotAPI/build/lib/libPlatformUnitGuiPlugin.so, /localhome/vmmaster/armarx/RobotAPI/build/lib/libRobotViewerGuiPlugin.so, /localhome/vmmaster/armarx/RobotAPI/build/lib/libSensorActorWidgetsGuiPlugin.so, /localhome/vmmaster/armarx/SimulationX/build/lib/libSimulatorControlGuiPlugin.so, /localhome/vmmaster/armarx/VisionX/build/lib/libEgomotionTrackerGuiPlugin.so, /localhome/vmmaster/armarx/VisionX/build/lib/libImageMonitorGuiPlugin.so, /localhome/vmmaster/armarx/VisionX/build/lib/libSessionPlayerGuiPlugin.so, /localhome/vmmaster/armarx/VisionX/build/lib/libVRMEditorGuiPlugin.so, /localhome/vmmaster/armarx/Armar3/build/lib/libWalkmanDemoGuiPlugin.so, /localhome/vmmaster/armarx/Armar4/build/lib/libBusInspectionGuiPlugin.so
+MainWindowGeometry=@ByteArray(\x1\xd9\xd0\xcb\0\x1\0\0\0\0\0\0\0\0\0\x34\0\0\x4'\0\0\x2\xa8\0\0\0\x1\0\0\0P\0\0\x4&\0\0\x2\xa7\0\0\0\0\0\0)
+DockWidgetsState=@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\x1\0\0\0\x1\0\0\x4&\0\0\x2)\xfc\x2\0\0\0\x1\xfc\0\0\0\x19\0\0\x2)\0\0\0\x8c\x1\0\0\x1d\xfa\0\0\0\x1\x2\0\0\0\x2\xfb\0\0\0\x1a\0\x44\0o\0\x63\0k\0L\0o\0g\0V\0i\0\x65\0w\0\x65\0r\x1\0\0\0\0\xff\xff\xff\xff\0\0\0n\0\xff\xff\xff\xfb\0\0\0(\0\x44\0o\0\x63\0k\0S\0t\0\x61\0t\0\x65\0\x63\0h\0\x61\0r\0t\0\x45\0\x64\0i\0t\0o\0r\x1\0\0\0\0\xff\xff\xff\xff\0\0\0\x62\0\xff\xff\xff\0\0\0\0\0\0\x2)\0\0\0\x4\0\0\0\x4\0\0\0\b\0\0\0\b\xfc\0\0\0\0)
+WidgetCustomNames=LogViewer, StatechartEditor
+
+[LogViewer]
+WidgetBaseName=Meta.LogViewer
+widgetWidth=1060
+widgetHeight=489
+verbosityLevel=1
+autoFilterAdding=true
+
+[StatechartEditor]
+WidgetBaseName=Statecharts.StatechartEditor
+widgetWidth=1060
+widgetHeight=501
+paths=@Invalid()
