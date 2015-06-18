@@ -7,8 +7,11 @@ popd > /dev/null
 source $BASEDIR/config.rc
 source $BASEDIR/colors.rc
 
+git clone https://armarx:armarx@i61wiki.itec.uka.de/git/armarx.git  /tmp/armarx
+
+
 cd $ARMARX_DIR
-repo init -u https://i61wiki.itec.uka.de/git/armarx.git
+repo init -u /tmp/armarx
 
 cd $ARMARX_DIR
 repo sync
