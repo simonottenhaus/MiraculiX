@@ -33,6 +33,7 @@ for PKG_DIR in $PKG_NAMES; do
 		echo -e "${BRed}============================${RCol}"
 		exit 1
 	fi
+	cmake ..
 done
 
 
