@@ -1,3 +1,3 @@
-PKG_NAMES="Core Gui RobotAPI MemoryX VisionX Spoac SimulationX RobotSkills Armar3 Armar4"
+PKG_NAMES="Core Gui RobotAPI MemoryX VisionX Spoac SimulationX RobotSkills SpeechX Armar3 Armar4"
 ARMARX_DIR=$BASEDIR/..
 LOG_FILE=$BASEDIR/.miraculix.log
