@@ -7,7 +7,7 @@ popd > /dev/null
 source $BASEDIR/config.rc
 source $BASEDIR/colors.rc
 
-p="-j4"
+p="-j8"
 if [[ $# -gt 0 ]]; then
     p=$*
 fi
@@ -18,6 +18,8 @@ for PKG_DIR in $PKG_NAMES; do
 	echo -e "${BWhi}============================${RCol}"
 	cd $ARMARX_DIR/$PKG_DIR/build
 	
+        echo -e '\033]2;'cmake $PKG_DIR running...'\007'
+
 	cmake .. 2> >(while read line; do echo -e "\e[01;31m$line\e[0m" >&2; done)
 	if [ $? -ne 0 ]; then
 		echo -e "${BRed}============================${RCol}"
@@ -26,6 +28,8 @@ for PKG_DIR in $PKG_NAMES; do
 		exit 1
 	fi
 	
+        echo -e '\033]2;'make $p $PKG_DIR running...'\007'
+
 	make $p
 	if [ $? -ne 0 ]; then
 		echo -e "${BRed}============================${RCol}"
