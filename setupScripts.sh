@@ -13,4 +13,5 @@ export LOG_FILE=${ArmarX_DIR}/MiraculiX/.miraculix.log
 #export MAKEFLAGS='-j$(expr $(nproc) - 1)'
 export MAKEFLAGS='-j7'
 
+source ${ArmarX_DIR}/MiraculiX/colors.rc
 source ${ArmarX_DIR}/MiraculiX/aliases.sh
