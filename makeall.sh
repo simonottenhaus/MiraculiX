@@ -26,7 +26,7 @@ for PKG_DIR in $PKG_NAMES; do
 		exit 1
 	fi
 	
-	make $p
+	nice make $p
 	if [ $? -ne 0 ]; then
 		echo -e "${BRed}============================${RCol}"
 		echo -e "${BRed}${PKG_DIR} BUILD FAILED ${RCol}"
