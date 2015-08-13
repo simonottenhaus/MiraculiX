@@ -30,7 +30,7 @@ for PKG_DIR in $PKG_NAMES; do
 	
         echo -e '\033]2;'make $p $PKG_DIR running...'\007'
 
-	make $p
+	nice make $p
 	if [ $? -ne 0 ]; then
 		echo -e "${BRed}============================${RCol}"
 		echo -e "${BRed}${PKG_DIR} BUILD FAILED ${RCol}"
