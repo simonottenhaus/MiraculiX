@@ -5,9 +5,8 @@ Changes:
 - pullall -> gitall pull
 
 You should clone this into your armarx folder under the name "MiraculiX".
-Edit config.rc to fit your setup.
-Take a look at setupScripts.sh for available aliases.
-Make sure you source the setupScripts file in your .bashrc as well ("source \<path-to-miraculix\>/setupScripts.sh")
+Edit setupScripts to fit your setup. Make sure you source the setupScripts file in your .bashrc as well ("source \<path-to-miraculix\>/setupScripts.sh").
+Take a look at aliases.sh for available aliases.
 
 Some basic commands:
 - start/stop: start/stop ice and mongodb
