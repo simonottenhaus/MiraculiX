@@ -1,5 +1,17 @@
 #!/bin/bash
 
+pushd `dirname $0` > /dev/null
+BASEDIR=`pwd`
+popd > /dev/null
+
+source $BASEDIR/config.rc
+source $BASEDIR/colors.rc
+
+p="-j8"
+if [[ $# -gt 0 ]]; then
+    p=$*
+fi
+
 for PKG_DIR in $PKG_NAMES; do
 	echo -e "${BWhi}============================${RCol}"
 	echo -e "${BWhi}Building ${PKG_DIR} ${RCol}"
