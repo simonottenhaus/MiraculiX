@@ -7,6 +7,11 @@ popd > /dev/null
 source $MIRACULIX_DIR/config.rc
 source $MIRACULIX_DIR/colors.rc
 
-$ArmarX_DIR/Core/build/bin/ice-start.sh
+if [ -d "$ArmarX_DIR/ArmarXCore" ]; then
+	$ArmarX_DIR/ArmarXCore/build/bin/ice-start.sh
+else
+	$ArmarX_DIR/Core/build/bin/ice-start.sh
+fi
+
 $ArmarX_DIR/MemoryX/build/bin/mongod.sh start
 #$ArmarX_DIR/MemoryX/build/bin/mongod.sh repair
