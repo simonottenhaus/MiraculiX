@@ -12,11 +12,11 @@ if [[ $# -gt 0 ]]; then
     p=$*
 fi
 
-for PKG_DIR in $AX_PACKAGES; do
-	echo -e "${BWhi}============================${RCol}"
-	echo -e "${BWhi}Building ${PKG_DIR} ${RCol}"
-	echo -e "${BWhi}============================${RCol}"
-	cd $ArmarX_DIR/$PKG_DIR/build
+for PKG_DIR in $PKG_NAMES; do
+	echo -e "${BPur}============================${RCol}"
+	echo -e "${Yel}Building ${PKG_DIR} ${RCol}"
+	echo -e "${BPur}============================${RCol}"
+	cd $ARMARX_DIR/$PKG_DIR/build
 	
 	make $p
 	if [ $? -ne 0 ]; then

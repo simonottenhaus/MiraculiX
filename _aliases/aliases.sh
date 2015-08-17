@@ -22,9 +22,9 @@ alias memimport="$ArmarX_DIR/MemoryX/build/bin/mongoimport.sh $ArmarX_DIR/Armar3
 alias memexport="$ArmarX_DIR/MemoryX/build/bin/mongoexport.sh memdb $ArmarX_DIR/Armar3/data/Armar3/dbexport/memdb"
 
 #miraculix integration
-alias status="gitall status -b -s"
-alias clean="cmdall \"cd build;rm -rf bin;rm -rf lib\""
-alias fullclean="cmdall \"cd build;rm -rf bin;rm -rf lib;rm -rf source\""
+alias status="$MIRACULIX_DIR/status.sh"
+alias clean="$MIRACULIX_DIR/clean.sh"
+alias fullclean="$MIRACULIX_DIR/fullclean.sh"
 alias install="$MIRACULIX_DIR/install.sh"
 alias makeall="$MIRACULIX_DIR/makeall.sh"
 alias fastmakeall="$MIRACULIX_DIR/fastmakeall.sh"
