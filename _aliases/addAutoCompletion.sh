@@ -11,7 +11,7 @@ _p ()
   
   case $prev in
     p ) 
-        COMPREPLY=( $( compgen -W "$AX_PROJECTS" -- $cur ) )
+        COMPREPLY=( $( compgen -W "$AX_PACKAGES" -- $cur ) )
     ;;
     *)  
       _filedir
