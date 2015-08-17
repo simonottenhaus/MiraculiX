@@ -16,6 +16,7 @@ alias gui="$ArmarX_DIR/ArmarXGui/build/bin/ArmarXGuiRun --ArmarX.GuiConfigFile=_
 alias guikill="killall -9 ArmarXGuiRun"
 alias cmdall="$MIRACULIX_ALIASES_DIR//cmdall.sh"
 alias gitall="cmdall git"
+alias allgit="gitall"
 #alias makeall="cmdall \"cd build;make\""
 alias delete_and_remake_all="cmdall \"rm -rf build;mkdir build;cd build;cmake ..\";makeall;makeall"
 alias memimport="$ArmarX_DIR/MemoryX/build/bin/mongoimport.sh $ArmarX_DIR/Armar3/data/Armar3/dbexport/memdb"

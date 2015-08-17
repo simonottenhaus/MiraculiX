@@ -2,28 +2,35 @@
 
 IFS=" " read -a projects <<< "$AX_PACKAGES"
 
-AX_PROJECT_SEARCH_DIR="$ArmarX_DIR/$1"
-AX_PROJECT_SEARCH_DIR_PREFIX="$ArmarX_DIR/ArmarX$1"
-
 if [ -z $1 ]
 then
 	cd "$ArmarX_DIR"
 else
+	FOUND=0
 	for i in "${projects[@]}"
 	do
-		AX_PROJECT_DIR=$ArmarX_DIR/$i
-		AX_PROJECT_DIR_LC="${AX_PROJECT_DIR,,}"
-		if [ "${AX_PROJECT_DIR_LC:0:${#AX_PROJECT_SEARCH_DIR}}" = ${AX_PROJECT_SEARCH_DIR,,} ] || [ "${AX_PROJECT_DIR_LC:0:${#AX_PROJECT_SEARCH_DIR_PREFIX}}" = ${AX_PROJECT_SEARCH_DIR_PREFIX,,} ]
+		PROJECT_WITH_PREFIX=armarx$1
+		if [[ ${i,,} = $1* ]] || [[ ${i,,} = $PROJECT_WITH_PREFIX* ]]
 		then
-			cd "$AX_PROJECT_DIR"
+			cd $ArmarX_DIR/$i
+			FOUND=1
 			break
 		fi
 	done
+	if [ $FOUND != 1 ]
+	then
+		for i in "${projects[@]}"
+		do
+			if [[ ${i,,} = *$1* ]]
+			then
+				cd $ArmarX_DIR/$i
+				break
+			fi
+		done
+	fi
 fi
 
 unset IFS
 unset projects
-unset AX_PROJECT_SEARCH_DIR
-unset AX_PROJECT_SEARCH_DIR_PREFIX
-unset AX_PROJECT_DIR
-unset AX_PROJECT_DIR_LC
+unset PROJECT_WITH_PREFIX
+unset FOUND
