@@ -36,9 +36,9 @@ alias git_stash_and_drop="git stash save --keep-index;git stash drop"
 #remove all local changes and reset to head
 alias git_reset_clean="git reset --hard; git clean -fd"
 
-alias inp="$MIRACULIX_ALIASES_DIR//inproject.sh"
+alias inp="$MIRACULIX_ALIASES_DIR/inproject.sh"
 alias mk="inp \"cd build;make\""
-alias cmk="inp \"cd build;cmake ..\""
+alias cmk="inp \"cd build;$MIRACULIX_ALIASES_DIR/prettycmake.sh\""
 alias sc=". $MIRACULIX_ALIASES_DIR/scenario.sh"
 alias p=". $MIRACULIX_ALIASES_DIR/project.sh"
 
