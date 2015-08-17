@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IFS=" " read -a projects <<< "$AX_PROJECTS"
+IFS=" " read -a projects <<< "$AX_PACKAGES"
 
 pushd $ArmarX_DIR > /dev/null
 

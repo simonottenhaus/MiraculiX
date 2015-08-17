@@ -1,22 +1,22 @@
 #!/bin/bash
 
 pushd `dirname $0` > /dev/null
-BASEDIR=`pwd`
+MIRACULIX_DIR=`pwd`
 popd > /dev/null
 
-source $BASEDIR/config.rc
-source $BASEDIR/colors.rc
+source $MIRACULIX_DIR/config.rc
+source $MIRACULIX_DIR/colors.rc
 
-p="-j8"
+p=$MAKEFLAGS
 if [[ $# -gt 0 ]]; then
     p=$*
 fi
 
-for PKG_DIR in $PKG_NAMES; do
-	echo -e "${BWhi}============================${RCol}"
-	echo -e "${BWhi}Building ${PKG_DIR} ${RCol}"
-	echo -e "${BWhi}============================${RCol}"
-	cd $ARMARX_DIR/$PKG_DIR/build
+for PKG_DIR in $AX_PACKAGES; do
+	echo -e "${BPur}============================${RCol}"
+	echo -e "${Yel}Building ${PKG_DIR} ${RCol}"
+	echo -e "${BPur}============================${RCol}"
+	cd $ArmarX_DIR/$PKG_DIR/build
 	
         echo -e '\033]2;'cmake $PKG_DIR running...'\007'
 

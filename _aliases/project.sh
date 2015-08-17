@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IFS=" " read -a projects <<< "$AX_PROJECTS"
+IFS=" " read -a projects <<< "$AX_PACKAGES"
 
 AX_PROJECT_SEARCH_DIR="$ArmarX_DIR/$1"
 AX_PROJECT_SEARCH_DIR_PREFIX="$ArmarX_DIR/ArmarX$1"

@@ -1,14 +1,14 @@
 #!/bin/bash -eu
 
 pushd `dirname $0` > /dev/null
-BASEDIR=`pwd`
+MIRACULIX_DIR=`pwd`
 popd > /dev/null
 
-source $BASEDIR/config.rc
-source $BASEDIR/colors.rc
+source $MIRACULIX_DIR/config.rc
+source $MIRACULIX_DIR/colors.rc
 
-for PKG_DIR in $PKG_NAMES; do
-	cd $ARMARX_DIR/$PKG_DIR
+for PKG_DIR in $AX_PACKAGES; do
+	cd $ArmarX_DIR/$PKG_DIR
     TIME=$(date -u +"%F %T")
     GIT_VERSION=$(git describe --always --dirty --long --tags)
     GIT_HEAD=$(git rev-parse HEAD)

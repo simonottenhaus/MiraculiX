@@ -1,10 +1,10 @@
 #!/bin/bash -u
 pushd `dirname $0` > /dev/null
-BASEDIR=`pwd`
+MIRACULIX_DIR=`pwd`
 popd > /dev/null
 
-source $BASEDIR/config.rc
-source $BASEDIR/colors.rc
+source $MIRACULIX_DIR/config.rc
+source $MIRACULIX_DIR/colors.rc
 
-$ARMARX_DIR/Core/build/bin/ice-stop.sh
-$ARMARX_DIR/MemoryX/build/bin/mongod.sh stop
+$ArmarX_DIR/Core/build/bin/ice-stop.sh
+$ArmarX_DIR/MemoryX/build/bin/mongod.sh stop

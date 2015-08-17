@@ -1,14 +1,14 @@
 #!/bin/bash -eu
 
 pushd `dirname $0` > /dev/null
-BASEDIR=`pwd`
+MIRACULIX_DIR=`pwd`
 popd > /dev/null
 
-source $BASEDIR/config.rc
-source $BASEDIR/colors.rc
+source $MIRACULIX_DIR/config.rc
+source $MIRACULIX_DIR/colors.rc
 
-for PKG_DIR in $PKG_NAMES; do
+for PKG_DIR in $AX_PACKAGES; do
 	echo -e "${BWhi}clean ${PKG_DIR}${RCol}"
-	rm -rf $ARMARX_DIR/$PKG_DIR/build/bin $ARMARX_DIR/$PKG_DIR/build/lib
+	rm -rf $ArmarX_DIR/$PKG_DIR/build/bin $ArmarX_DIR/$PKG_DIR/build/lib
 done
 

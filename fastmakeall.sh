@@ -1,22 +1,22 @@
 #!/bin/bash
 
 pushd `dirname $0` > /dev/null
-BASEDIR=`pwd`
+MIRACULIX_DIR=`pwd`
 popd > /dev/null
 
-source $BASEDIR/config.rc
-source $BASEDIR/colors.rc
+source $MIRACULIX_DIR/config.rc
+source $MIRACULIX_DIR/colors.rc
 
 p="-j4"
 if [[ $# -gt 0 ]]; then
     p=$*
 fi
 
-for PKG_DIR in $PKG_NAMES; do
+for PKG_DIR in $AX_PACKAGES; do
 	echo -e "${BWhi}============================${RCol}"
 	echo -e "${BWhi}Building ${PKG_DIR} ${RCol}"
 	echo -e "${BWhi}============================${RCol}"
-	cd $ARMARX_DIR/$PKG_DIR/build
+	cd $ArmarX_DIR/$PKG_DIR/build
 	
 	make $p
 	if [ $? -ne 0 ]; then

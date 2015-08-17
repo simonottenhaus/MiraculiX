@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IFS=" " read -a projects <<< "$AX_PROJECTS"
+IFS=" " read -a projects <<< "$AX_PACKAGES"
 
 for i in "${projects[@]}"
 do
