@@ -14,7 +14,7 @@ fi
 
 for PKG_DIR in $AX_PACKAGES; do
 	echo -e "${BPur}============================${RCol}"
-	echo -e "${Yel}Building ${PKG_DIR} ${RCol}"
+	echo -e "${Whi}Building ${Yel}${PKG_DIR} ${RCol}"
 	echo -e "${BPur}============================${RCol}"
 	cd $ArmarX_DIR/$PKG_DIR/build
 	

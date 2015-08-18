@@ -1,15 +1,15 @@
-AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX ArmarXSimulation RobotComponents Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
+AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
 
 # old names, more tab completion friendly:
-#AX_PACKAGES="Core Gui RobotAPI MemoryX VisionX SimulationX RobotComponents Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
+#AX_PACKAGES="Core Gui RobotAPI MemoryX VisionX RobotComponents SimulationX Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
 
 ArmarX_DIR=$MIRACULIX_DIR/..
 LOG_FILE=$MIRACULIX_DIR/.miraculix.log
 
 #uses all cores (incl virtual), but can make the system inresponsive
-#export MAKEFLAGS='-j$(nproc)'
+#MAKEFLAGS='-j$(nproc)'
 
 #uses all cores - 1, almost as fast as the above, but system stays responsive
 #NOTE: the below doesn't work as expected; forgot why
-#export MAKEFLAGS='-j$(expr $(nproc) - 1)'
+#MAKEFLAGS='-j$(expr $(nproc) - 1)'
 MAKEFLAGS='-j7'
