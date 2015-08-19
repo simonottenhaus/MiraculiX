@@ -3,7 +3,7 @@ AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents Armar
 # old names, more tab completion friendly:
 #AX_PACKAGES="Core Gui RobotAPI MemoryX VisionX RobotComponents SimulationX Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
 
-ArmarX_DIR=$MIRACULIX_DIR/..
+ArmarX_DIR=`realpath $MIRACULIX_DIR/..`
 LOG_FILE=$MIRACULIX_DIR/.miraculix.log
 
 #uses all cores (incl virtual), but can make the system inresponsive
@@ -13,3 +13,12 @@ LOG_FILE=$MIRACULIX_DIR/.miraculix.log
 #NOTE: the below doesn't work as expected; forgot why
 #MAKEFLAGS='-j$(expr $(nproc) - 1)'
 MAKEFLAGS='-j7'
+
+source $MIRACULIX_DIR/colors.rc
+
+#verify that all packages exist
+for PKG_DIR in $AX_PACKAGES; do
+	if [ ! -d "$ArmarX_DIR/$PKG_DIR" ]; then
+		echo -e "${BRed}Folder ${BWhi}$ArmarX_DIR/$PKG_DIR ${BRed}does not exist. Did you configure MiraculiX correctly? ${RCol}"
+	fi
+done
