@@ -1,9 +1,15 @@
-AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
+AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation Spoac SpeechX RobotSkillTemplates Armar3 Armar4 ROSBridge  WalkMan"
 
 # old names, more tab completion friendly:
 #AX_PACKAGES="Core Gui RobotAPI MemoryX VisionX RobotComponents SimulationX Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
 
-ArmarX_DIR=`realpath $MIRACULIX_DIR/..`
+if which realpath >/dev/null; then
+    ArmarX_DIR=`realpath $MIRACULIX_DIR/..`
+else
+    ArmarX_DIR=$MIRACULIX_DIR/..
+fi
+
+
 LOG_FILE=$MIRACULIX_DIR/.miraculix.log
 
 #uses all cores (incl virtual), but can make the system inresponsive
