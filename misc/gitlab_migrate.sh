@@ -9,7 +9,7 @@ MIRACULIX_DIR=$BASEDIR/..
 source $MIRACULIX_DIR/config.rc
 source $MIRACULIX_DIR/colors.rc
 
-GITLAB_PKGS="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX";
+GITLAB_PKGS="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents RobotSkillTemplates"
 
 for PKG_DIR in ${GITLAB_PKGS}; do
     echo "Updating git remote url for ${PKG_DIR}"
