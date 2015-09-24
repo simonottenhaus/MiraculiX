@@ -1,4 +1,4 @@
-AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation Spoac SpeechX RobotSkillTemplates Armar3 Armar4 ROSBridge  WalkMan"
+AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
 
 # old names, more tab completion friendly:
 #AX_PACKAGES="Core Gui RobotAPI MemoryX VisionX RobotComponents SimulationX Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
