@@ -9,8 +9,8 @@ git clone https://gitlab.com/ArmarX/RobotComponents.git
 git clone https://gitlab.com/ArmarX/ArmarXSimulation.git
 git clone https://gitlab.com/ArmarX/RobotSkillTemplates.git
 
-git clone https://i61wiki.itec.uka.de/git/Spoac
-git clone https://i61wiki.itec.uka.de/git/Speechx
-git clone https://i61wiki.itec.uka.de/git/Armar3
-git clone https://i61wiki.itec.uka.de/git/Armar4
+git clone https://i61wiki.itec.uka.de/git/spoac Spoac
+git clone https://i61wiki.itec.uka.de/git/speechx SpeechX
+git clone https://i61wiki.itec.uka.de/git/armar3 Armar3
+git clone https://i61wiki.itec.uka.de/git/armar4 Armar4
 
