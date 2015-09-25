@@ -20,8 +20,8 @@ alias gitall="cmdall git"
 alias allgit="gitall"
 #alias makeall="cmdall \"cd build;make\""
 alias delete_and_remake_all="cmdall \"rm -rf build;mkdir build;cd build;cmake ..\";makeall;makeall"
-alias memimport="$ArmarX_DIR/MemoryX/build/bin/mongoimport.sh $ArmarX_DIR/Armar3/data/Armar3/dbexport/memdb"
-alias memexport="$ArmarX_DIR/MemoryX/build/bin/mongoexport.sh memdb $ArmarX_DIR/Armar3/data/Armar3/dbexport/memdb"
+alias memimport="$ArmarX_DIR/MemoryX/build/bin/mongoimport.sh $ArmarX_DIR/ArmarXDB/data/ArmarXDB/dbexport/memdb"
+alias memexport="$ArmarX_DIR/MemoryX/build/bin/mongoexport.sh memdb $ArmarX_DIR/ArmarXDB/data/ArmarXDB/dbexport/memdb"
 
 #miraculix integration
 alias status="$MIRACULIX_DIR/status.sh"
