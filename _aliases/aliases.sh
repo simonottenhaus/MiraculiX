@@ -27,7 +27,6 @@ alias memexport="$ArmarX_DIR/MemoryX/build/bin/mongoexport.sh memdb $ArmarX_DIR/
 alias status="$MIRACULIX_DIR/status.sh"
 alias clean="$MIRACULIX_DIR/clean.sh"
 alias fullclean="$MIRACULIX_DIR/fullclean.sh"
-alias install="$MIRACULIX_DIR/install.sh"
 alias makeall="$MIRACULIX_DIR/makeall.sh"
 alias fastmakeall="$MIRACULIX_DIR/fastmakeall.sh"
 
