@@ -39,7 +39,9 @@ for PKG_DIR in $AX_PACKAGES; do
 		echo -e "${BRed}============================${RCol}"
 		exit 1
 	fi
-	cmake ..
+	if [ "$CMAKE_AFTER_MAKE" = true ]; then
+		cmake ..
+	fi
 done
 
 END_TIME=$(date +%s.%N)
