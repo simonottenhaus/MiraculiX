@@ -51,5 +51,7 @@ alias armarx_tests_enable="cmdall \"cd build;cmake -DARMARX_BUILD_TESTS=ON ..\""
 alias armarx_versioncheck_disable="cmdall \"cd build; cmake -DARMARX_ENABLE_DEPENDENCY_VERSION_CHECK=OFF ..\""
 alias armarx_versioncheck_enable="cmdall \"cd build; cmake -DARMARX_ENABLE_DEPENDENCY_VERSION_CHECK=ON ..\""
 
+alias newclass="$MIRACULIX_DIR/_templates/newclass.pl"
+
 source $MIRACULIX_ALIASES_DIR/addAutoCompletion.sh
 
