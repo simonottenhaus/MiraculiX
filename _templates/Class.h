@@ -18,7 +18,6 @@
 *             GNU General Public License
 */
 
-
 #ifndef INCLUDEGUARD
 #define INCLUDEGUARD
 

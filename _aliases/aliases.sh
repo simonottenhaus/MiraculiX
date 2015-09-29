@@ -42,6 +42,7 @@ alias mk="inp \"cd build;make\""
 alias cmk="inp \"cd build;$MIRACULIX_ALIASES_DIR/prettycmake.sh\""
 alias sc=". $MIRACULIX_ALIASES_DIR/scenario.sh"
 alias p=". $MIRACULIX_ALIASES_DIR/project.sh"
+alias pb=". $MIRACULIX_ALIASES_DIR/projectbuild.sh"
 
 alias untargz="tar -zxvf"
 

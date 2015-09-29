@@ -59,6 +59,8 @@ $header =~ s/CLASS_NAME/$className/g;
 $header =~ s/INCLUDEGUARD/$includeGuard/g;
 #print $header;
 
+$cpp =~ s/USER_NAME/$userName/g;
+$cpp =~ s/USER_EMAIL/$userEmail/g;
 $cpp =~ s/CLASS_NAME/$className/g;
 #print $cpp;
 
