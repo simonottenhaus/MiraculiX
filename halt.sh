@@ -6,7 +6,9 @@ popd > /dev/null
 source $MIRACULIX_DIR/config.rc
 source $MIRACULIX_DIR/colors.rc
 
-if [ -d "$ArmarX_DIR/ArmarXCore" ]; then
+if type armarx > /dev/null; then
+	armarx stop
+elif [ -d "$ArmarX_DIR/ArmarXCore" ]; then
 	$ArmarX_DIR/ArmarXCore/build/bin/ice-stop.sh
 else
 	$ArmarX_DIR/Core/build/bin/ice-stop.sh
