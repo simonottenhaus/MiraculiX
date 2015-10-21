@@ -12,6 +12,21 @@ if [[ $# -gt 0 ]]; then
     p=$*
 fi
 
+
+if [[ `hostname | cut -c-5` == 'i61pc' ]]; then
+	echo -e "${BPur}============================${RCol}"
+    echo -e "${Yel} Using CCache ;-) ${RCol}"
+	echo -e "${BPur}============================${RCol}"
+    source /etc/lsb-release
+    export PATH=/usr/lib/ccache:$PATH
+    export CCACHE_BASEDIR=$ARMARX_DIR
+    export CCACHE_DIR=/common/share/archive/jenkins_ccache/${DISTRIB_CODENAME}
+    export CCACHE_TEMPDIR=$HOME/.ccache_temp_${DISTRIB_CODENAME}
+    export CCACHE_READONLY=1
+    ccache -s
+fi
+
+
 START_TIME=$(date +%s.%N)
 
 for PKG_DIR in $AX_PACKAGES; do
