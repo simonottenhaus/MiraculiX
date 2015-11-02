@@ -1,7 +1,7 @@
 # MiraculiX
 
 You should clone this into your armarx folder under the name "MiraculiX".  
-Edit config.rc to fit your setup. Make sure you source the _setupAliases file in your .bashrc as well ("source \<path-to-miraculix\>/_setupAliases.sh").  
+Create config.user.rc next to config.rc to fit your setup. Make sure you source the _setupAliases file in your .bashrc as well ("source \<path-to-miraculix\>/_setupAliases.sh").  
 Take a look at _aliases/aliases.sh for available aliases.  
 
 Some basic commands:
