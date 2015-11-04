@@ -36,7 +36,7 @@ _sc ()
   
   case $prev in
     sc ) 
-        COMPREPLY=( $( compgen -W "$(cmdall "cd scenarios; find -L -maxdepth 1 -type d -name '*' ! -name '.*' -printf '%f\n' | column" | grep -v \#)" -- $cur ) )
+        COMPREPLY=( $( compgen -W "$(cmdall "cd scenarios; find -L -maxdepth 2 -type d -name '*' ! -name '.*' -printf '%f\n' | column" | grep -v \#)" -- $cur ) )
     ;;
     *)  
       _filedir
