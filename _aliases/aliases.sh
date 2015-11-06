@@ -53,6 +53,7 @@ alias armarx_versioncheck_disable="cmdall \"cd build; cmake -DARMARX_ENABLE_DEPE
 alias armarx_versioncheck_enable="cmdall \"cd build; cmake -DARMARX_ENABLE_DEPENDENCY_VERSION_CHECK=ON ..\""
 
 alias newclass="$MIRACULIX_DIR/_templates/newclass.pl"
+alias feierabend=". $MIRACULIX_DIR/_tools/feierabend.sh"
 
 source $MIRACULIX_ALIASES_DIR/addAutoCompletion.sh
 
