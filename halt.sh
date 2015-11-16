@@ -8,6 +8,7 @@ source $MIRACULIX_DIR/colors.rc
 
 if type armarx > /dev/null; then
 	armarx stop
+	armarx killIce
 elif [ -d "$ArmarX_DIR/ArmarXCore" ]; then
 	$ArmarX_DIR/ArmarXCore/build/bin/ice-stop.sh
 else
