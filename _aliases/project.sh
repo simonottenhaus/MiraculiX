@@ -18,7 +18,7 @@ else
 	for AX_PROJECT in "${projects[@]}"
 	do
 		PROJECT_WITH_PREFIX=armarx$3
-		if [[ ${AX_PROJECT,,} = $3* ]] || [[ ${AX_PROJECT,,} = $PROJECT_WITH_PREFIX* ]]
+		if [[ ${AX_PROJECT,,} = ${3,,}* ]] || [[ ${AX_PROJECT,,} = ${PROJECT_WITH_PREFIX,,}* ]]
 		then
 			COMMAND_TO_EXECUTE=eval echo $COMMAND_TO_EXECUTE > /dev/null
 			eval $COMMAND_TO_EXECUTE
@@ -31,7 +31,7 @@ else
 	then
 		for AX_PROJECT in "${projects[@]}"
 		do
-			if [[ ${AX_PROJECT,,} = *$3* ]]
+			if [[ ${AX_PROJECT,,} = *${3,,}* ]]
 			then
 				COMMAND_TO_EXECUTE=eval echo $COMMAND_TO_EXECUTE > /dev/null
 				eval $COMMAND_TO_EXECUTE
