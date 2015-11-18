@@ -3,6 +3,7 @@ echo "You're using Valerij-enabled extensions of MiraculiX"
 #export ArmarX_DIR="/home/SMBAD/wittenbe/home/repos/armarx"
 #export AX_PROJECTS="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX ArmarXSimulation Spoac SpeechX RobotComponents RobotSkillTemplates Armar3 YouBotTutorial"
 
+alias gg="git gui"
 alias rl="source ~/.bashrc"
 alias geanyclear="rm ~/.config/geany/geany_socket_*"
 alias sa="./startScenario.sh -w"
@@ -55,6 +56,8 @@ alias armarx_versioncheck_enable="cmdall \"cd build; cmake -DARMARX_ENABLE_DEPEN
 
 alias newclass="$MIRACULIX_DIR/_templates/newclass.pl"
 alias feierabend=". $MIRACULIX_DIR/_tools/feierabend.sh"
+
+source $MIRACULIX_DIR/_aliases.user.sh
 
 source $MIRACULIX_ALIASES_DIR/addAutoCompletion.sh
 
