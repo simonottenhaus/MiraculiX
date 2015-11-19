@@ -21,6 +21,7 @@ LOG_FILE=$MIRACULIX_DIR/.miraculix.log
 MAKEFLAGS='-j7'
 CMAKE_AFTER_MAKE=true
 
+
 source $MIRACULIX_DIR/colors.rc
 
 if [ -f "$MIRACULIX_DIR/config.user.rc" ]; then
@@ -32,4 +33,9 @@ for PKG_DIR in $AX_PACKAGES; do
 	if [ ! -d "$ArmarX_DIR/$PKG_DIR" ]; then
 		echo -e "${BRed}Folder ${BWhi}$ArmarX_DIR/$PKG_DIR ${BRed}does not exist. Did you configure MiraculiX correctly? ${RCol}"
 	fi
+done
+
+CMAKE_PARAMS=""
+for PKG_NAME in $AX_PACKAGES; do
+    CMAKE_PARAMS="${CMAKE_PARAMS} ${PKG_NAME}_DIR:FILE=${ArmarX_DIR}/${PKG_NAME}/build"
 done
