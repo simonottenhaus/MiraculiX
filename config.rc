@@ -37,5 +37,5 @@ done
 
 CMAKE_PARAMS=""
 for PKG_NAME in $AX_PACKAGES; do
-    CMAKE_PARAMS="${CMAKE_PARAMS} ${PKG_NAME}_DIR:FILE=${ArmarX_DIR}/${PKG_NAME}/build"
+    CMAKE_PARAMS="${CMAKE_PARAMS} -D${PKG_NAME}_DIR:FILE=${ArmarX_DIR}/${PKG_NAME}/build"
 done
