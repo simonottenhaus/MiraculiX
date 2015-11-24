@@ -1,3 +1,0 @@
-# here, you can (re)define the parameters in config.rc as you see fit
-
-#AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation Spoac SpeechX RobotSkillTemplates Armar3 Armar4"

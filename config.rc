@@ -24,9 +24,11 @@ CMAKE_AFTER_MAKE=true
 
 source $MIRACULIX_DIR/colors.rc
 
-if [ -f "$MIRACULIX_DIR/config.user.rc" ]; then
-    source $MIRACULIX_DIR/config.user.rc
+if [ ! -f "$MIRACULIX_DIR/config.user.rc" ]; then
+    echo -e "${BGre}Miraculix: Creating default user config in $MIRACULIX_DIR/config.user.rc${RCol}"
+    printf "# here, you can override the parameters set in config.rc as you see fit\n\n#AX_PACKAGES=\"$AX_PACKAGES\"" > $MIRACULIX_DIR/config.user.rc
 fi
+source $MIRACULIX_DIR/config.user.rc
 
 #verify that all packages exist
 for PKG_DIR in $AX_PACKAGES; do
