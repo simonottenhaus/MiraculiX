@@ -9,6 +9,8 @@ else
     ArmarX_DIR=$MIRACULIX_DIR/..
 fi
 
+ARMARX_DIR=$ArmarX_DIR
+
 
 LOG_FILE=$MIRACULIX_DIR/.miraculix.log
 
