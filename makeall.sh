@@ -20,6 +20,7 @@ if [[ `hostname | cut -c-5` == 'i61pc' ]]; then
     source /etc/lsb-release
     export PATH=/usr/lib/ccache:$PATH
     export CCACHE_DIR=/common/share/archive/jenkins_ccache/${DISTRIB_CODENAME}
+    export CCACHE_BASEDIR=$ARMARX_DIR
     export CCACHE_TEMPDIR=$HOME/.ccache_temp_${DISTRIB_CODENAME}
     export CCACHE_READONLY=1
     ccache -s
@@ -33,8 +34,6 @@ for PKG_DIR in $AX_PACKAGES; do
 	echo -e "${BPur}============================${RCol}"
 	cd $ArmarX_DIR/$PKG_DIR/build
 
-    export CCACHE_BASEDIR=$ARMARX_DIR/$PKG_DIR
-	
     echo -e '\033]2;'cmake $PKG_DIR running...'\007'
     echo $CMAKE_PARAMS 
 	cmake $CMAKE_PARAMS .. 2> >(while read line; do echo -e "\e[01;31m$line\e[0m" >&2; done)
