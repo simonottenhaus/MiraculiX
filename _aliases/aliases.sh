@@ -23,6 +23,7 @@ alias allgit="gitall"
 alias delete_and_remake_all="cmdall \"rm -rf build;mkdir build;cd build;cmake ..\";makeall;makeall"
 alias memimport="$ArmarX_DIR/MemoryX/build/bin/mongoimport.sh $ArmarX_DIR/ArmarXDB/data/ArmarXDB/dbexport/memdb"
 alias memexport="$ArmarX_DIR/MemoryX/build/bin/mongoexport.sh memdb $ArmarX_DIR/ArmarXDB/data/ArmarXDB/dbexport/memdb"
+alias memrepair="$ArmarX_DIR/MemoryX/build/bin/mongod.sh repair"
 
 #miraculix integration
 alias status="$MIRACULIX_DIR/status.sh"
@@ -31,7 +32,6 @@ alias fullclean="$MIRACULIX_DIR/fullclean.sh"
 alias makeall="$MIRACULIX_DIR/makeall.sh"
 alias fastmakeall="$MIRACULIX_DIR/fastmakeall.sh"
 
-alias qtcreator="qtcreator &"
 
 #remove all local changes to fix "Your local changes to the following files would be overwritten by merge"
 alias git_stash_and_drop="git stash save --keep-index;git stash drop"
