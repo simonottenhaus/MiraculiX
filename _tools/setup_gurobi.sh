@@ -15,7 +15,7 @@ then
 	fi
 	#echo "Using '$GRB_DESIRED_NAME' gurobi license"
 else
-	echo -e "\e[31mWarning\e[39m: No gurobi licence file for host '\e[39m"`hostname`"' available, get it at\n    http://user.gurobi.com/download/licenses/free-academic\nand move it similar to the following:\n    mv gurobi.lic $KIT_LU_DIR/gurobi/$GRB_DESIRED_NAME"
+	echo -e "\e[31mWarning\e[39m: No gurobi licence file for host '\e[39m"`hostname`"' available, get it at\n    http://user.gurobi.com/download/licenses/free-academic\nand move it similar to the following:\n    mv $HOME/gurobi.lic $KIT_LU_DIR/gurobi/$GRB_DESIRED_NAME"
 fi
 popd >/dev/null
 
