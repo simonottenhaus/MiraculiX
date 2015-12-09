@@ -22,3 +22,23 @@ Enable aliases:
 # Add this line to your ~/.bashrc
 source ~/home/armarx/MiraculiX/_setupAliases.sh
 ```
+
+Initial run:
+```
+start
+memimport
+stop
+```
+
+Edit ~/.armarx/default.cfg:
+- Change the port number for ice
+- Change the port number for MongoDB
+```
+# Edit ~/.armarx/default.cfg
+Ice.Default.Locator=IceGrid/Locator:tcp -p UNIQUE_ICE_PORT_HERE -h localhost
+IceGrid.Registry.Client.Endpoints=tcp -p UNIQUE_ICE_PORT_HERE
+IceStormAdmin.TopicManager.Default=IceStorm/TopicManager
+
+ArmarX.MongoHost=localhost
+ArmarX.MongoPort=UNIQUE_MONGODB_PORT_HERE
+```
