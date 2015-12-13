@@ -7,12 +7,10 @@ popd > /dev/null
 source $MIRACULIX_DIR/config.rc
 source $MIRACULIX_DIR/colors.rc
 
-if type armarx > /dev/null; then
-	armarx start
-elif [ -d "$ArmarX_DIR/ArmarXCore" ]; then
-	$ArmarX_DIR/ArmarXCore/build/bin/ice-start.sh
+if [ -d "$ArmarX_DIR/ArmarXCore" ]; then
+	$ArmarX_DIR/ArmarXCore/build/bin/armarx start
 else
-	$ArmarX_DIR/Core/build/bin/ice-start.sh
+	$ArmarX_DIR/Core/build/bin/armarx start
 fi
 
 $ArmarX_DIR/MemoryX/build/bin/mongod.sh start
