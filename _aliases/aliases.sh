@@ -36,7 +36,7 @@ alias fastmakeall="$MIRACULIX_DIR/fastmakeall.sh"
 #remove all local changes to fix "Your local changes to the following files would be overwritten by merge"
 alias git_stash_and_drop="git stash save --keep-index;git stash drop"
 #remove all local changes and reset to head
-alias git_reset_clean="git reset --hard; git clean -fd"
+alias git_reset_clean="git reset --hard HEAD^; git clean -fd"
 
 alias inp="$MIRACULIX_ALIASES_DIR/inproject.sh"
 alias mk="inp \"cd build;make\""
