@@ -16,6 +16,9 @@ done
 unset PROCESS_ID
 unset PROCESS_PATH
 
+# just logging out (i.e. SIGKILL-ing) can cause bad stuff to happen to qtcreator (particularly to sessions), idk if this is any better tho
+killall -s TERM qtcreator 2>/dev/null
+
 echo -e "${Yel}Stopping ice/mongodb${RCol}"
 `. $MIRACULIX_DIR/halt.sh 2>/dev/null` 2>/dev/null
 echo -e "${Yel}Logging out${RCol}"
