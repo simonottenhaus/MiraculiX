@@ -1,7 +1,7 @@
-AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
+AX_PACKAGES="ArmarXCore ArmarXGui RobotAPI MemoryX VisionX RobotComponents ArmarXSimulation RobotSkillTemplates Spoac SpeechX Armar3 Armar4"
 
 # old names, more tab completion friendly:
-#AX_PACKAGES="Core Gui RobotAPI MemoryX VisionX RobotComponents SimulationX Spoac SpeechX RobotSkillTemplates Armar3 Armar4"
+#AX_PACKAGES="Core Gui RobotAPI MemoryX VisionX RobotComponents SimulationX RobotSkillTemplates Spoac SpeechX Armar3 Armar4"
 
 if which realpath >/dev/null; then
     ArmarX_DIR=`realpath $MIRACULIX_DIR/..`
