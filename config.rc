@@ -21,7 +21,7 @@ LOG_FILE=$MIRACULIX_DIR/.miraculix.log
 #NOTE: the below doesn't work as expected; forgot why
 #MAKEFLAGS='-j$(expr $(nproc) - 1)'
 MAKEFLAGS='-j7'
-CMAKE_AFTER_MAKE=true
+CMAKE_AFTER_MAKE=false #no longer needed
 
 
 source $MIRACULIX_DIR/colors.rc
