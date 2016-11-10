@@ -8,7 +8,7 @@ for i in "${projects[@]}"
 do
     echo -e "\e[35m### \e[33m$i \e[35m###\e[0m"
     pushd $i > /dev/null
-   
+	
     eval "$@"
    
     popd > /dev/null

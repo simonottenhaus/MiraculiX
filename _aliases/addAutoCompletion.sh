@@ -47,3 +47,29 @@ _sc ()
 }
 
 complete -F _sc sc
+
+# Add autocomplete to st
+_st ()
+{
+  local cur
+  local prev
+  local x
+
+  COMPREPLY=()   # Array variable storing the possible completions.
+  cur=${COMP_WORDS[COMP_CWORD]}
+  prev=${COMP_WORDS[COMP_CWORD-1]}
+  
+  case $prev in
+    st ) 
+        #COMPREPLY=( $( compgen -W "$(cmdall "cd source/\${PWD##*/}/statecharts 2> /dev/null; find -L -maxdepth 2 -type d -name '*' ! -name '.*' -printf '%f\n' | column" | grep -v \#)" -- $cur ) )
+        COMPREPLY=( $( compgen -W "$(cmdall "cd source/\${PWD##*/}/statecharts 2> /dev/null && find -L -maxdepth 1 -type d -name '*' ! -name '.*' -printf '%f\n' | column" | grep -v \#)" -- $cur ) )
+    ;;
+    *)  
+      _filedir
+    ;;
+  esac
+
+  return 0	
+}
+
+complete -F _st st

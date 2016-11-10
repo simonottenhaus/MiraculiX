@@ -8,7 +8,12 @@ AX_INFIX_MATCH=0
 for i in "${projects[@]}"
 do
 	AX_SCENARIOS_DIR="$ArmarX_DIR/$i/scenarios"
+<<<<<<< Updated upstream
+	AX_SCENARIO_PATH="$AX_SCENARIOS_DIR/$1"
+	for DIR in $AX_SCENARIOS_DIR/*/ $AX_SCENARIOS_DIR/test/*/ $AX_SCENARIOS_DIR/tests/*/ $AX_SCENARIOS_DIR/demos/*/ 
+=======
 	for DIR in $AX_SCENARIOS_DIR/*/ $AX_SCENARIOS_DIR/test/*/ $AX_SCENARIOS_DIR/tests/*/ 
+>>>>>>> Stashed changes
 	do
 		DIR_BASE_LC=`basename ${DIR,,}`
 		if [[ "$DIR_BASE_LC" = ${1,,}* ]] 
@@ -23,17 +28,30 @@ do
 			#echo "$AX_INFIX_MATCH"
 		fi
 	done
-	if [ $AX_SCENARIO_FOUND = 1 ] 
-	then 
-		break 
+	if [ $AX_SCENARIO_FOUND = 0 ]
+	then
+		for DIR in $AX_SCENARIOS_DIR/*/ $AX_SCENARIOS_DIR/test/*/ $AX_SCENARIOS_DIR/tests/*/ $AX_SCENARIOS_DIR/demos/*/
+		do
+			DIR_BASE_LC=`basename ${DIR,,}`
+			if [[ "$DIR_BASE_LC" = *${1,,}* ]] 
+			then
+				cd "$DIR"
+				break
+			fi
+		done
+	else
+		break
 	fi
 done
 
+<<<<<<< Updated upstream
+=======
 if [ $AX_INFIX_MATCH != 0 ] && [ $AX_SCENARIO_FOUND = 0 ]
 then
 	cd "$AX_INFIX_MATCH"
 fi
 
+>>>>>>> Stashed changes
 unset IFS
 unset projects
 unset DIR
