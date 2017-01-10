@@ -19,7 +19,7 @@ MiraculiX/makeall.sh
 Enable aliases:
 ```
 # Add this line to your ~/.bashrc
-source ~/home/armarx/MiraculiX/_setupAliases.sh
+source ~/armarx/MiraculiX/_setupAliases.sh
 ```
 
 Initial run:
