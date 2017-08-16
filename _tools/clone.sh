@@ -13,5 +13,6 @@ git clone https://i61wiki.itec.uka.de/git/spoac Spoac
 git clone https://i61wiki.itec.uka.de/git/speechx SpeechX
 git clone https://i61wiki.itec.uka.de/git/armar3 Armar3
 git clone https://i61wiki.itec.uka.de/git/armar4 Armar4
+git clone https://i61wiki.itec.uka.de/git/armar4-rt Armar4-RT
 git clone https://i61wiki.itec.uka.de/git/armar6rt Armar6RT
 
