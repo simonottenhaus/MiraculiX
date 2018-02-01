@@ -7,7 +7,7 @@ git config --global user.email your.email@domain.example
 git config --global credential.helper cache
 ```
 
-Create directories and clone MiraculiX, ArmarX and build. This takes up to 40 minutes (8 core PC) or > 1 h (4 Core PC):
+Create directories and clone MiraculiX, ArmarX. 
 ```
 mkdir armarx
 cd armarx
@@ -23,7 +23,7 @@ make -j8
 echo "export Simox_DIR=`pwd`" >> ~/.bashrc
 ```
 
-
+Build ArmarX. This takes up to 1h (8 core PC) or > 2 h (4 Core PC):
 ```
 cd  ~/armarx
 MiraculiX/makeall.sh
