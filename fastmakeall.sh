@@ -7,18 +7,22 @@ popd > /dev/null
 source $MIRACULIX_DIR/config.rc
 source $MIRACULIX_DIR/colors.rc
 
-p="-j4"
+p=$MAKEFLAGS
 if [[ $# -gt 0 ]]; then
     p=$*
 fi
 
+START_TIME=$(date +%s.%N)
+
 for PKG_DIR in $AX_PACKAGES; do
 	echo -e "${BPur}============================${RCol}"
-	echo -e "${Whi}Building ${Yel}${PKG_DIR} ${RCol}"
+	echo -e "${Yel}Building ${PKG_DIR} ${RCol}"
 	echo -e "${BPur}============================${RCol}"
 	cd $ArmarX_DIR/$PKG_DIR/build
 	
-	make $p
+    echo -e '\033]2;'make $p $PKG_DIR running...'\007'
+
+	nice ionice -c 2 -n 7  make $p
 	if [ $? -ne 0 ]; then
 		echo -e "${BRed}============================${RCol}"
 		echo -e "${BRed}${PKG_DIR} BUILD FAILED ${RCol}"
@@ -26,5 +30,9 @@ for PKG_DIR in $AX_PACKAGES; do
 		exit 1
 	fi
 done
+
+END_TIME=$(date +%s.%N)
+DIFF=$(echo "scale=1; ($END_TIME - $START_TIME) / 1" | bc)
+echo -e "${BGre}Build completed in ${DIFF}s ${RCol}"
 
 
