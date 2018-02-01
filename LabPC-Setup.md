@@ -25,6 +25,7 @@ echo "export Simox_DIR=`pwd`" >> ~/.bashrc
 
 
 ```
+cd  ~/armarx
 MiraculiX/makeall.sh
 ```
 
