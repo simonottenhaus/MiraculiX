@@ -21,8 +21,7 @@
  *             GNU General Public License
  */
 
-#ifndef INCLUDEGUARD
-#define INCLUDEGUARD
+#pragma once
 
 #include <boost/shared_ptr.hpp>
 
@@ -39,5 +38,3 @@ namespace armarx
     private:
     };
 }
-
-#endif // INCLUDEGUARD
