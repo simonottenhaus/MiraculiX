@@ -35,8 +35,7 @@ for PKG_DIR in $AX_PACKAGES; do
 	cd $ArmarX_DIR/$PKG_DIR/build
 
     echo -e '\033]2;'cmake $PKG_DIR running...'\007'
-    echo $CMAKE_PARAMS 
-	cmake $CMAKE_PARAMS .. 2> >(while read line; do echo -e "\e[01;31m$line\e[0m" >&2; done)
+	cmake .. 2> >(while read line; do echo -e "\e[01;31m$line\e[0m" >&2; done)
 	if [ $? -ne 0 ]; then
 		echo -e "${BRed}============================${RCol}"
 		echo -e "${BRed}${PKG_DIR} CMAKE FAILED ${RCol}"
