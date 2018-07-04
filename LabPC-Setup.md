@@ -17,7 +17,7 @@ MiraculiX/_tools/clone.sh # This needs access to the h2t repositories. Get a red
 
 Setup your own local Simox (optional but highly recommended!)
 ```
-cd ~/armarx/simox/build
+cd ~/armarx/Simox/build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DSimox_BUILD_SimDynamics=on -DSimDynamics_USE_BULLET_DOUBLE_PRECISION=on
 make -j8
 echo "export Simox_DIR=`pwd`" >> ~/.bashrc
