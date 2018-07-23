@@ -9,7 +9,8 @@ source $MIRACULIX_DIR/colors.rc
 
 for PKG_DIR in $AX_PACKAGES; do
 	cd $ArmarX_DIR/$PKG_DIR/
-	echo -e "${Yel}${PKG_DIR}${RCol} `git log -1 --format=%cr`"
+	echo -e "${Yel}${PKG_DIR}${RCol} ${Blu} -  `git log -1 --format=%cr`${RCol}"
+	#echo -e "${Blu}`git log -1 --format=%cr`${RCol}"
 	git status -b -s
 done
 
