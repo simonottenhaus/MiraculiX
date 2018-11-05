@@ -27,8 +27,7 @@
 
 namespace armarx
 {
-    class CLASS_NAME;
-    typedef boost::shared_ptr<CLASS_NAME> CLASS_NAMEPtr;
+    typedef boost::shared_ptr<class CLASS_NAME> CLASS_NAMEPtr;
 
     class CLASS_NAME
     {
