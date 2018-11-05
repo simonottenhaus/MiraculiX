@@ -23,8 +23,20 @@ make -j8
 echo "export Simox_DIR=`pwd`" >> ~/.bashrc
 ```
 
+Setup your own local IVT
+```
+mkdir ~/armarx/IVT/build
+cd ~/armarx/IVT/build
+cmake ..
+make -j8
+echo "export IVT_DIR=`pwd`" >> ~/.bashrc
+```
+
 Build ArmarX. This takes up to 1h (8 core PC) or > 2 h (4 Core PC):
 ```
+# Reload .bashrc
+. ~/.bashrc
+
 cd  ~/armarx
 MiraculiX/makeall.sh
 ```
