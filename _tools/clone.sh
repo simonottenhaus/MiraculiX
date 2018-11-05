@@ -1,4 +1,5 @@
 git clone https://gitlab.com/Simox/simox.git Simox
+git clone https://gitlab.com/ivt/ivt.git IVT
 git clone https://gitlab.com/ArmarX/ArmarXDoc.git
 git clone https://gitlab.com/ArmarX/ArmarXCore.git
 git clone https://gitlab.com/ArmarX/ArmarXGui.git
