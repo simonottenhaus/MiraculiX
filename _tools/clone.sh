@@ -4,6 +4,7 @@ git clone https://gitlab.com/ArmarX/ArmarXDoc.git
 git clone https://gitlab.com/ArmarX/ArmarXCore.git
 git clone https://gitlab.com/ArmarX/ArmarXGui.git
 git clone https://gitlab.com/ArmarX/RobotAPI.git
+git clone https://gitlab.com/ArmarX/TrainX.git
 git clone https://gitlab.com/ArmarX/MemoryX.git
 git clone https://gitlab.com/ArmarX/ArmarXDB.git
 git clone https://gitlab.com/ArmarX/VisionX.git
