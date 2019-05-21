@@ -25,11 +25,28 @@ echo "export Simox_DIR=`pwd`" >> ~/.bashrc
 
 Setup your own local IVT
 ```
-mkdir ~/armarx/IVT/build
 cd ~/armarx/IVT/build
 cmake ..
 make -j8
 echo "export IVT_DIR=`pwd`" >> ~/.bashrc
+```
+
+Setup your own local MMMCore
+```
+mkdir ~/armarx/MMMCore/build
+cd ~/armarx/MMMCore/build
+cmake ..
+make -j8
+echo "export MMMCore_DIR=`pwd`" >> ~/.bashrc
+```
+
+Enable aliases (optional):
+```
+# Add alias setup to .bashrc
+echo "source ~/armarx/MiraculiX/_setupAliases.sh" >> ~/.bashrc
+
+# Reload .bashrc
+. ~/.bashrc
 ```
 
 Build ArmarX. This takes up to 1h (8 core PC) or > 2 h (4 Core PC):
@@ -41,14 +58,6 @@ cd  ~/armarx
 MiraculiX/makeall.sh
 ```
 
-Enable aliases:
-```
-# Add alias setup to .bashrc
-echo "source ~/armarx/MiraculiX/_setupAliases.sh" >> ~/.bashrc
-
-# Reload .bashrc
-. ~/.bashrc
-```
 
 Initial run:
 ```
