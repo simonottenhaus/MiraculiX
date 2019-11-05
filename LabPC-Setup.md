@@ -9,15 +9,15 @@ git config --global credential.helper cache
 
 Create directories and clone MiraculiX, ArmarX. 
 ```
-mkdir armarx
-cd armarx
+mkdir repos
+cd repos
 git clone https://github.com/simonottenhaus/MiraculiX.git
 MiraculiX/_tools/clone.sh # This needs access to the h2t repositories. Get a redmine account first!
 ```
 
 Setup your own local Simox (optional but highly recommended!)
 ```
-cd ~/armarx/Simox/build
+cd ~/repos/Simox/build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DSimox_BUILD_SimDynamics=on -DSimDynamics_USE_BULLET_DOUBLE_PRECISION=on
 make -j8
 echo "export Simox_DIR=`pwd`" >> ~/.bashrc
@@ -25,7 +25,7 @@ echo "export Simox_DIR=`pwd`" >> ~/.bashrc
 
 Setup your own local IVT
 ```
-cd ~/armarx/IVT/build
+cd ~/repos/IVT/build
 cmake ..
 make -j8
 echo "export IVT_DIR=`pwd`" >> ~/.bashrc
@@ -33,8 +33,8 @@ echo "export IVT_DIR=`pwd`" >> ~/.bashrc
 
 Setup your own local MMMCore
 ```
-mkdir ~/armarx/MMMCore/build
-cd ~/armarx/MMMCore/build
+mkdir ~/repos/MMMCore/build
+cd ~/repos/MMMCore/build
 cmake ..
 make -j8
 echo "export MMMCore_DIR=`pwd`" >> ~/.bashrc
@@ -43,7 +43,7 @@ echo "export MMMCore_DIR=`pwd`" >> ~/.bashrc
 Enable aliases (optional):
 ```
 # Add alias setup to .bashrc
-echo "source ~/armarx/MiraculiX/_setupAliases.sh" >> ~/.bashrc
+echo "source ~/repos/MiraculiX/_setupAliases.sh" >> ~/.bashrc
 
 # Reload .bashrc
 . ~/.bashrc
@@ -54,7 +54,7 @@ Build ArmarX. This takes up to 1h (8 core PC) or > 2 h (4 Core PC):
 # Reload .bashrc
 . ~/.bashrc
 
-cd  ~/armarx
+cd  ~/repos
 MiraculiX/makeall.sh
 ```
 
